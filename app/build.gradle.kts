@@ -8,11 +8,12 @@ android {
 
     defaultConfig {
         applicationId = "uk.co.ht.serialporttest"
-        minSdk = 19
+        minSdk = 21
         targetSdk = 34
         versionCode = 1
         versionName = "1.0"
 
+        multiDexEnabled = true
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
 
@@ -36,6 +37,14 @@ android {
 
 dependencies {
 
+    implementation(fileTree(mapOf(
+        "dir" to "jniLibs",
+        "include" to listOf("*.aar", "*.jar"),
+        "exclude" to emptyList<String>())))
+
+    implementation(libs.fastjson)
+
+    implementation(libs.multidex)
     implementation(libs.appcompat)
     implementation(libs.material)
     implementation(libs.constraintlayout)

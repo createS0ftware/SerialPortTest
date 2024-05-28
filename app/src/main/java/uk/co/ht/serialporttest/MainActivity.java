@@ -10,8 +10,7 @@ import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 
-import uk.co.higherthoughts.serialporttest.R;
-import uk.co.higherthoughts.serialporttest.databinding.ActivityMainBinding;
+import uk.co.ht.serialporttest.databinding.ActivityMainBinding;
 
 
 public class MainActivity extends AppCompatActivity {

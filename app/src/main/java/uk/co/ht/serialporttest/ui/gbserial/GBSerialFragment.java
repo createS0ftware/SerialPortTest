@@ -1,4 +1,4 @@
-package uk.co.ht.serialporttest.ui.libyy;
+package uk.co.ht.serialporttest.ui.gbserial;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -10,23 +10,23 @@ import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 
-import uk.co.ht.serialporttest.databinding.FragmentLibyyBinding;
+import uk.co.ht.serialporttest.databinding.FragmentGbserialBinding;
 
 
-public class LibyyFragment extends Fragment {
+public class GBSerialFragment extends Fragment {
 
-    private FragmentLibyyBinding binding;
+    private FragmentGbserialBinding binding;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        LibyyViewModel libyyViewModel =
-                new ViewModelProvider(this).get(LibyyViewModel.class);
+        GBSerialViewModel GBSerialViewModel =
+                new ViewModelProvider(this).get(GBSerialViewModel.class);
 
-        binding = FragmentLibyyBinding.inflate(inflater, container, false);
+        binding = FragmentGbserialBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
 
-        final TextView textView = binding.textLibby;
-        libyyViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
+        final TextView textView = binding.textGbserial;
+        GBSerialViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
         return root;
     }
 

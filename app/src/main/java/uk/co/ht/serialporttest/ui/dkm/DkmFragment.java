@@ -24,10 +24,18 @@ public class DkmFragment extends Fragment {
         binding = FragmentDkmBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
 
+        binding.buttonConnect.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dkmViewModel.connect(binding.textDkm.getText().toString());
+            }
+        });
         final TextView textView = binding.textDkm;
         dkmViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
         return root;
     }
+
+
 
     @Override
     public void onDestroyView() {
