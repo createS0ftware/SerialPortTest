@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">SerialPortTest</string>
+    <string name="title_libyy">Libyy</string>
+    <string name="title_dkm">DKM</string>
+    <string name="title_serial_lib">Serial Lib</string>
+    <string name="explain_code">code explanation</string>
+</resources>
